@@ -1,0 +1,19 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "Ramesh2627",
+    "database": "Store",
+    "synchronize": true,
+    "logging": false,
+    "entities": [
+       "build/entities/**/*.js"
+    ],
+    "migrations": [
+       "src/migration/**/*.ts"
+    ],
+    "subscribers": [
+       "src/subscriber/**/*.ts"
+    ]
+ }

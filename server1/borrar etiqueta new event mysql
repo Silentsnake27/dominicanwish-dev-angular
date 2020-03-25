@@ -1,0 +1,12 @@
+DROP EVENT IF EXISTS `delete7DayOldMessages`;
+DELIMITER $$
+CREATE EVENT `deletesticknew`
+  ON SCHEDULE EVERY 1 DAY STARTS '2020-01-02 00:00:00'
+  ON COMPLETION PRESERVE
+DO BEGIN
+  UPDATE products SET new=null,expired=null WHERE expired < now();
+   
+  -- Other code here
+
+END$$
+DELIMITER ;
